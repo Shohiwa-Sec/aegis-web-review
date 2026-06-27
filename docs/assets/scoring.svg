@@ -1,0 +1,20 @@
+<svg width="1200" height="520" viewBox="0 0 1200 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="520" fill="#070B10"/>
+  <text x="60" y="72" fill="#E8F0ED" font-family="Inter,Segoe UI,sans-serif" font-size="40" font-weight="900">Readiness vs Reliability</text>
+  <text x="60" y="106" fill="#8EA09A" font-family="Inter,Segoe UI,sans-serif" font-size="18">Two scores separate launch-review gaps from observable maturity and trust posture.</text>
+  <g font-family="Inter,Segoe UI,sans-serif">
+    <rect x="80" y="160" width="480" height="250" rx="20" fill="#0F1720" stroke="#243443"/>
+    <text x="120" y="215" fill="#F0B84B" font-size="30" font-weight="900">Readiness Score</text>
+    <text x="120" y="255" fill="#A6B8B2" font-size="18">How clean the site is against launch-review checks.</text>
+    <text x="120" y="305" fill="#E8F0ED" font-size="17">Weighted by:</text>
+    <text x="145" y="340" fill="#A6B8B2" font-size="16">Severity, confidence, business impact, cost exposure</text>
+    <rect x="120" y="365" width="360" height="12" rx="6" fill="#23313D"/><rect x="120" y="365" width="275" height="12" rx="6" fill="#F0B84B"/>
+
+    <rect x="640" y="160" width="480" height="250" rx="20" fill="#0F1720" stroke="#243443"/>
+    <text x="680" y="215" fill="#6FF1D1" font-size="30" font-weight="900">Reliability Score</text>
+    <text x="680" y="255" fill="#A6B8B2" font-size="18">How mature the public website posture appears.</text>
+    <text x="680" y="305" fill="#E8F0ED" font-size="17">Credited by:</text>
+    <text x="705" y="340" fill="#A6B8B2" font-size="16">HTTPS, headers, policies, contact paths, page evidence</text>
+    <rect x="680" y="365" width="360" height="12" rx="6" fill="#23313D"/><rect x="680" y="365" width="335" height="12" rx="6" fill="#6FF1D1"/>
+  </g>
+</svg>

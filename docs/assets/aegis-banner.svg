@@ -1,0 +1,18 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="420" fill="#070B10"/>
+  <rect x="1" y="1" width="1198" height="418" rx="28" stroke="#243443" stroke-width="2"/>
+  <path d="M0 340C160 270 275 298 418 236C574 168 700 95 910 134C1040 158 1125 115 1200 78V420H0V340Z" fill="#0F1720"/>
+  <path d="M0 365C168 306 290 328 450 270C610 212 732 150 914 181C1042 203 1136 164 1200 132" stroke="#6FF1D1" stroke-opacity="0.22" stroke-width="2"/>
+  <circle cx="1005" cy="92" r="86" fill="#6FF1D1" fill-opacity="0.07"/>
+  <circle cx="1005" cy="92" r="55" stroke="#6FF1D1" stroke-opacity="0.28" stroke-width="2"/>
+  <rect x="72" y="70" width="84" height="84" rx="18" fill="#0F1720" stroke="#6FF1D1" stroke-width="2"/>
+  <text x="114" y="125" text-anchor="middle" fill="#6FF1D1" font-family="Inter,Segoe UI,sans-serif" font-size="42" font-weight="900">A</text>
+  <text x="72" y="205" fill="#6FF1D1" font-family="Consolas,monospace" font-size="18" font-weight="700">AI WEBSITE ASSURANCE PLATFORM</text>
+  <text x="72" y="270" fill="#E8F0ED" font-family="Inter,Segoe UI,sans-serif" font-size="64" font-weight="900">Aegis Web Review</text>
+  <text x="76" y="318" fill="#A6B8B2" font-family="Inter,Segoe UI,sans-serif" font-size="24">Pre-launch security, privacy, compliance-risk, and AI trust scanning for AI-built websites.</text>
+  <g transform="translate(780 245)">
+    <rect width="300" height="90" rx="16" fill="#101923" stroke="#243443"/>
+    <text x="24" y="34" fill="#8EA09A" font-family="Consolas,monospace" font-size="14">READINESS</text>
+    <text x="24" y="68" fill="#6FF1D1" font-family="Inter,Segoe UI,sans-serif" font-size="34" font-weight="900">Grade + Score</text>
+  </g>
+</svg>

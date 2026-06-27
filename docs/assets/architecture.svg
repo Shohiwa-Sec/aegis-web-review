@@ -1,0 +1,53 @@
+<svg width="1200" height="620" viewBox="0 0 1200 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="620" fill="#070B10"/>
+  <text x="60" y="74" fill="#E8F0ED" font-family="Inter,Segoe UI,sans-serif" font-size="40" font-weight="900">System Architecture</text>
+  <text x="60" y="108" fill="#8EA09A" font-family="Inter,Segoe UI,sans-serif" font-size="18">Evidence collection, deterministic rules, cost-weighted scoring, and report presentation.</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#6FF1D1"/></marker>
+  </defs>
+  <g font-family="Inter,Segoe UI,sans-serif">
+    <rect x="60" y="170" width="190" height="115" rx="16" fill="#0F1720" stroke="#243443"/>
+    <text x="90" y="212" fill="#6FF1D1" font-size="18" font-weight="800">React UI</text>
+    <text x="90" y="242" fill="#A6B8B2" font-size="14">URL input</text>
+    <text x="90" y="264" fill="#A6B8B2" font-size="14">Dashboard</text>
+
+    <rect x="330" y="170" width="190" height="115" rx="16" fill="#0F1720" stroke="#243443"/>
+    <text x="360" y="212" fill="#58C7F3" font-size="18" font-weight="800">Vite Endpoint</text>
+    <text x="360" y="242" fill="#A6B8B2" font-size="14">Server-side fetch</text>
+    <text x="360" y="264" fill="#A6B8B2" font-size="14">CORS-safe scan</text>
+
+    <rect x="600" y="170" width="190" height="115" rx="16" fill="#0F1720" stroke="#243443"/>
+    <text x="630" y="212" fill="#F0B84B" font-size="18" font-weight="800">Evidence Layer</text>
+    <text x="630" y="242" fill="#A6B8B2" font-size="14">Headers, HTML</text>
+    <text x="630" y="264" fill="#A6B8B2" font-size="14">Links, forms, scripts</text>
+
+    <rect x="870" y="170" width="190" height="115" rx="16" fill="#0F1720" stroke="#243443"/>
+    <text x="900" y="212" fill="#9B8CFF" font-size="18" font-weight="800">Rule Engine</text>
+    <text x="900" y="242" fill="#A6B8B2" font-size="14">Deterministic checks</text>
+    <text x="900" y="264" fill="#A6B8B2" font-size="14">Findings</text>
+
+    <line x1="250" y1="228" x2="325" y2="228" stroke="#6FF1D1" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="520" y1="228" x2="595" y2="228" stroke="#6FF1D1" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="790" y1="228" x2="865" y2="228" stroke="#6FF1D1" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="195" y="390" width="250" height="115" rx="16" fill="#0F1720" stroke="#243443"/>
+    <text x="225" y="432" fill="#6FF1D1" font-size="18" font-weight="800">Scoring System</text>
+    <text x="225" y="462" fill="#A6B8B2" font-size="14">Readiness + reliability</text>
+    <text x="225" y="484" fill="#A6B8B2" font-size="14">Business-impact weighting</text>
+
+    <rect x="505" y="390" width="250" height="115" rx="16" fill="#0F1720" stroke="#243443"/>
+    <text x="535" y="432" fill="#58C7F3" font-size="18" font-weight="800">Report Model</text>
+    <text x="535" y="462" fill="#A6B8B2" font-size="14">Priorities, quick wins</text>
+    <text x="535" y="484" fill="#A6B8B2" font-size="14">Evidence + references</text>
+
+    <rect x="815" y="390" width="250" height="115" rx="16" fill="#0F1720" stroke="#243443"/>
+    <text x="845" y="432" fill="#F0B84B" font-size="18" font-weight="800">Console Output</text>
+    <text x="845" y="462" fill="#A6B8B2" font-size="14">Security dashboard</text>
+    <text x="845" y="484" fill="#A6B8B2" font-size="14">Markdown export</text>
+
+    <line x1="965" y1="285" x2="965" y2="340" stroke="#6FF1D1" stroke-width="2"/>
+    <path d="M965 340 C965 360 940 360 940 385" stroke="#6FF1D1" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+    <line x1="815" y1="448" x2="760" y2="448" stroke="#6FF1D1" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="505" y1="448" x2="450" y2="448" stroke="#6FF1D1" stroke-width="2" marker-end="url(#arrow)"/>
+  </g>
+</svg>

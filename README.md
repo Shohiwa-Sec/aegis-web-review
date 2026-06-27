@@ -69,6 +69,21 @@ Each finding can include links to research starting points such as:
 
 These links help users research what may apply to them. Aegis does not claim that a specific law has been violated.
 
+
+## Visual Overview
+
+### System Architecture
+
+![Aegis system architecture](docs/assets/architecture.svg)
+
+### Scanner Workflow
+
+![Aegis scanner workflow](docs/assets/workflow.svg)
+
+### Scoring Model
+
+![Aegis scoring model](docs/assets/scoring.svg)
+
 ## Tech Stack
 
 | Layer | Tool | Purpose |
@@ -155,3 +170,4 @@ Planned improvements:
 - PDF export.
 - Hosted deployment.
 - Optional AI-assisted remediation explanations.
+
