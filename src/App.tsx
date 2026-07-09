@@ -3,74 +3,9 @@
  Purpose: UI + reporting for passive web scans. Comments are laid-back but helpful.
 */
 import { FormEvent, useEffect, useMemo, useState } from "react";
+import { Severity, Category, Confidence, Difficulty, BusinessImpact, Reference, Finding, SiteProfile, ScanReport, categories, reportModes, ReportMode, normalizeInputUrl, scoreTone, categoryFindingCount, categoryClass } from "./utils";
 
-// Severity levels used to rank findings — higher numbers mean more urgent.
-type Severity = "Critical" | "High" | "Medium" | "Low" | "Advisory";
-type Category = "Security" | "Privacy" | "Compliance" | "AI Trust";
-type Confidence = "High" | "Medium" | "Low";
-type Difficulty = "Easy" | "Medium" | "Hard";
-type BusinessImpact = "Launch blocker" | "Trust gap" | "Technical hardening" | "Manual review";
-
-type Reference = {
-  label: string;
-  url: string;
-  note: string;
-};
-
-type Finding = {
-  id: string;
-  title: string;
-  severity: Severity;
-  category: Category;
-  confidence: Confidence;
-  difficulty: Difficulty;
-  businessImpact: BusinessImpact;
-  evidence: string;
-  evidenceSnippet: string;
-  pageUrl: string;
-  summary: string;
-  impact: string;
-  fix: string;
-  steps: string[];
-  references: Reference[];
-};
-
-type SiteProfile = {
-  siteType: string;
-  dataCollection: string;
-  tracking: string;
-  aiFeatures: string;
-  regulatedRisk: string;
-  businessModel: string;
-};
-
-type ScanReport = {
-  targetUrl: string;
-  scannedAt: string;
-  score: number;
-  grade: string;
-  verdict: string;
-  reliabilityScore: number;
-  reliabilityLabel: string;
-  categoryScores: Record<Category, number>;
-  topPriorities: string[];
-  quickWins: string[];
-  siteProfile: SiteProfile;
-  scannedPages: Array<{ url: string; status: number; links: number; forms: number; scripts: number }>;
-  findings: Finding[];
-  evidence: {
-    finalUrl: string;
-    status: number;
-    headersChecked: string[];
-    linksFound: number;
-    formsFound: number;
-    scriptsFound: number;
-    presentSecurityHeaders?: string[];
-    missingSecurityHeaders?: string[];
-    trackersFound?: number;
-    pagesScanned?: number;
-  };
-};
+// Types moved to src/utils.ts — use the shared definitions there for consistency.
 
 const categories: Category[] = ["Security", "Privacy", "Compliance", "AI Trust"];
 const reportModes = ["Executive", "Analyst", "Assurance"] as const;
@@ -137,26 +72,12 @@ const sampleReport: ScanReport = {
 
 const severityOrder: Record<Severity, number> = { Critical: 5, High: 4, Medium: 3, Low: 2, Advisory: 1 };
 
-function scoreTone(score: number) {
-  if (score >= 90) return "excellent";
-  if (score >= 80) return "good";
-  if (score >= 70) return "watch";
-  return "risk";
-}
+// scoreTone moved to src/utils.ts (imported above)
 
-function categoryFindingCount(report: ScanReport, category: Category) {
-  return report.findings.filter((finding) => finding.category === category).length;
-}
-
-function categoryClass(category: Category) {
-  return category.toLowerCase().replace(/\s+/g, "-");
-}
+// categoryFindingCount and categoryClass moved to src/utils.ts (imported above)
 
 // Help users by normalizing bare hostnames to full HTTPS URLs.
-function normalizeInputUrl(value: string) {
-  const trimmed = value.trim();
-  return /^https?:\/\//i.test(trimmed) ? trimmed : `https://${trimmed}`;
-}
+// normalizeInputUrl moved to src/utils.ts (imported above)
 
 function executiveSummary(report: ScanReport) {
   if (report.findings.length === 0) {
