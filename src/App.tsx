@@ -1,5 +1,10 @@
+/*
+ Aegis — casual, developer-friendly comments
+ Purpose: UI + reporting for passive web scans. Comments are laid-back but helpful.
+*/
 import { FormEvent, useEffect, useMemo, useState } from "react";
 
+// Severity levels used to rank findings — higher numbers mean more urgent.
 type Severity = "Critical" | "High" | "Medium" | "Low" | "Advisory";
 type Category = "Security" | "Privacy" | "Compliance" | "AI Trust";
 type Confidence = "High" | "Medium" | "Low";
@@ -72,6 +77,7 @@ const reportModes = ["Executive", "Analyst", "Assurance"] as const;
 type ReportMode = (typeof reportModes)[number];
 const historyKey = "aegis.scanHistory";
 
+// Small example reference used in the demo report. Swap or remove for production.
 const sampleReference: Reference = {
   label: "FTC Privacy and Security Guidance",
   url: "https://www.ftc.gov/business-guidance/privacy-security",
@@ -146,6 +152,7 @@ function categoryClass(category: Category) {
   return category.toLowerCase().replace(/\s+/g, "-");
 }
 
+// Help users by normalizing bare hostnames to full HTTPS URLs.
 function normalizeInputUrl(value: string) {
   const trimmed = value.trim();
   return /^https?:\/\//i.test(trimmed) ? trimmed : `https://${trimmed}`;
@@ -180,6 +187,8 @@ function loadHistory() {
   }
 }
 
+// Main React component: holds local UI state, scan flow, and rendering logic.
+// Read through the state hooks to see how data flows — it's fairly straightforward.
 function App() {
   const [targetUrl, setTargetUrl] = useState("https://example.com");
   const [report, setReport] = useState<ScanReport>(sampleReport);
@@ -203,7 +212,9 @@ function App() {
     localStorage.setItem(historyKey, JSON.stringify(nextHistory));
   }
 
-  async function runScan(event: FormEvent<HTMLFormElement>) {
+  // Kick off a scan via the backend API and wire results into state.
+// Keeps the UI responsive and stores history for quick recall.
+async function runScan(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setIsScanning(true);
     setError("");
@@ -225,7 +236,8 @@ function App() {
     }
   }
 
-  function downloadReport() {
+  // Export the current report as Markdown so teams can share it easily.
+function downloadReport() {
     const blob = new Blob([markdownReport(report)], { type: "text/markdown" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");

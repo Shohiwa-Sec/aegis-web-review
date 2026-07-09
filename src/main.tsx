@@ -1,3 +1,4 @@
+/* Entry point — bootstraps the React app. Simple and intentional. */
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
