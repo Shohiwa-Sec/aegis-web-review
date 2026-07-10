@@ -1,0 +1,26 @@
+﻿{
+    "allow_force_pushes":  {
+                               "enabled":  false
+                           },
+    "required_status_checks":  {
+                                   "contexts":  [
+
+                                                ],
+                                   "strict":  true
+                               },
+    "allow_deletions":  {
+                            "enabled":  false
+                        },
+    "restrictions":  null,
+    "enforce_admins":  {
+                           "enabled":  true
+                       },
+    "required_pull_request_reviews":  {
+                                          "required_approving_review_count":  1,
+                                          "require_code_owner_reviews":  false,
+                                          "dismiss_stale_reviews":  true
+                                      },
+    "required_linear_history":  {
+                                    "enabled":  true
+                                }
+}
