@@ -1,3 +1,5 @@
+/* Theme tokens and base styles — tweak these variables for quick theming.
+   Casual note: keep contrast high for accessibility. */
 :root {
   --bg: #070b10;
   --panel: #0f1720;
